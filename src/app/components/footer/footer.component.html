@@ -1,0 +1,38 @@
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <!-- Colonne 1 : Marque -->
+    <div class="footer-brand">
+      <a routerLink="/" class="brand-logo">AMDAL <span>FOOD</span></a>
+      <p class="slogan">{{ t.translate('footer.slogan') }}</p>
+      <p class="desc">{{ t.translate('footer.desc') }}</p>
+    </div>
+
+    <!-- Colonne 2 : Navigation -->
+    <div class="footer-links">
+      <h3>{{ t.translate('footer.discover') }}</h3>
+      <ul>
+        <li><a routerLink="/">{{ t.translate('nav.home') }}</a></li>
+        <li><a routerLink="/products">{{ t.translate('nav.products') }}</a></li>
+        <li><a routerLink="/contact">{{ t.translate('nav.partner') }}</a></li>
+      </ul>
+    </div>
+
+    <!-- Colonne 3 : Contact -->
+    <div class="footer-contact">
+      <h3>{{ t.translate('footer.exchange') }}</h3>
+      <p><a href="mailto:customerservice@amdalfood.com" class="email-link">customerservice&#64;amdalfood.com</a></p>
+      <p><a href="mailto:Contact.amdalfood@gmail.com" class="email-link">Contact.amdalfood&#64;gmail.com</a></p>
+      <p class="meta">
+        <span>📞 0773173572</span> · <span>📍 Île-de-France, France</span>
+      </p>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <p>© 2026 AMDAL FOOD.</p>
+    <div class="legal-links">
+      <a routerLink="/">{{ t.translate('footer.legal') }}</a>
+      <a routerLink="/">{{ t.translate('footer.privacy') }}</a>
+    </div>
+  </div>
+</footer>

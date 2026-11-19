@@ -1,0 +1,134 @@
+<app-nav-bar></app-nav-bar>
+
+<div class="container contact-page">
+  <nav aria-label="Fil d’Ariane" class="breadcrumb">
+    <a routerLink="/">{{ t.translate('contact.breadcrumb') }}</a> / <span>{{ t.translate('nav.contact') }}</span>
+  </nav>
+
+  <header>
+    <p class="eyebrow">{{ t.translate('contact.eyebrow') }}</p>
+    <h1>
+      {{ t.translate('contact.title1') }}<br>
+      <span>{{ t.translate('contact.title2') }}</span>
+    </h1>
+    <p>{{ t.translate('contact.subtitle') }}</p>
+  </header>
+
+  <div class="contact-grid">
+    <aside>
+      <div class="dark">
+        <p class="eyebrow">{{ t.translate('contact.aside.eyebrow1') }}</p>
+        <h2>{{ t.translate('contact.aside.title') }}</h2>
+        <p>{{ t.translate('contact.aside.desc') }}</p>
+        <hr>
+        <p class="eyebrow">{{ t.translate('contact.aside.eyebrow2') }}</p>
+        <ul>
+          <li>{{ t.translate('contact.aside.li1') }}</li>
+          <li>{{ t.translate('contact.aside.li2') }}</li>
+          <li>{{ t.translate('contact.aside.li3') }}</li>
+        </ul>
+      </div>
+
+      <div class="location">
+        <p class="eyebrow">{{ t.translate('contact.loc.eyebrow') }}</p>
+        <h3>Île-de-France, France</h3>
+        <p>{{ t.translate('contact.loc.desc') }}</p>
+      </div>
+    </aside>
+
+    <form (ngSubmit)="onSubmit()" novalidate>
+      <div *ngIf="IS_TEST_MODE" class="test-mode-banner">
+        <strong>MODE TEST ACTIF :</strong> Email → {{ targetEmail }} | WhatsApp → +{{ targetWhatsApp }}
+      </div>
+
+      <h2>{{ t.translate('contact.form.title') }}</h2>
+      <p class="help">{{ t.translate('contact.form.required') }}</p>
+
+      <div *ngIf="errorMessage" class="alert alert-error">
+        {{ errorMessage }}
+      </div>
+
+      <div *ngIf="submitSuccess" class="alert alert-success">
+        {{
+          t.getLanguage() === 'ar'
+            ? 'تم إرسال طلبكم بنجاح!'
+            : (t.getLanguage() === 'en' ? 'Your inquiry has been sent successfully!' : 'Votre demande a bien été envoyée !')
+        }}
+      </div>
+
+      <div class="fields">
+        <label>
+          {{ t.translate('contact.form.name') }}
+          <input type="text" name="name" [(ngModel)]="formData.name" autocomplete="name" required>
+        </label>
+
+        <label>
+          {{ t.translate('contact.form.company') }}
+          <input type="text" name="company" [(ngModel)]="formData.company" autocomplete="organization" required>
+        </label>
+
+        <label>
+          {{ t.translate('contact.form.country') }}
+          <input type="text" name="country" [(ngModel)]="formData.country" list="countries" autocomplete="country-name" required>
+          <datalist id="countries">
+            <option value="France"></option>
+            <option value="Maroc"></option>
+            <option value="Belgique"></option>
+            <option value="Suisse"></option>
+            <option value="Espagne"></option>
+            <option value="Portugal"></option>
+            <option value="Allemagne"></option>
+            <option value="Italie"></option>
+            <option value="Royaume-Uni"></option>
+            <option value="États-Unis"></option>
+            <option value="Canada"></option>
+            <option value="Algérie"></option>
+            <option value="Tunisie"></option>
+            <option value="Sénégal"></option>
+          </datalist>
+        </label>
+
+        <label for="activity">
+          {{ t.translate('contact.form.activity') }}
+          <input id="activity" type="text" name="activity" [(ngModel)]="formData.activity" placeholder="Ex. distributeur alimentaire, grossiste, enseigne...">
+        </label>
+      </div>
+
+      <fieldset>
+        <legend>{{ t.translate('contact.form.legend') }}</legend>
+        <p id="contact-help" class="help">{{ t.translate('contact.form.contact_help') }}</p>
+
+        <div class="fields">
+          <label>
+            {{ t.translate('contact.form.email') }}
+            <input name="email" type="email" [(ngModel)]="formData.email" autocomplete="email">
+          </label>
+
+          <div>
+            <span class="field-label">{{ t.translate('contact.form.phone') }}</span>
+            <div class="phone">
+              <label for="dial-code" class="sr-only">Indicatif</label>
+              <input id="dial-code" name="dialCode" type="tel" [(ngModel)]="formData.dialCode" autocomplete="tel-country-code">
+              <label for="phone" class="sr-only">Numéro de téléphone</label>
+              <input id="phone" name="phone" type="tel" [(ngModel)]="formData.phone" autocomplete="tel-national" placeholder="Votre numéro">
+            </div>
+          </div>
+        </div>
+      </fieldset>
+
+      <label class="message-label">
+        {{ t.translate('contact.form.message') }}
+        <textarea name="message" rows="6" [(ngModel)]="formData.message" required></textarea>
+      </label>
+
+      <p>
+        <button type="submit" class="button" [disabled]="isSubmitting">
+          {{ isSubmitting ? '...' : t.translate('contact.form.submit') }}
+          <span aria-hidden="true" class="arrow">→</span>
+        </button>
+      </p>
+    </form>
+  </div>
+</div>
+
+<app-footer></app-footer>

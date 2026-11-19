@@ -1,0 +1,31 @@
+<header class="site-header">
+  <div class="container nav-container">
+    <a routerLink="/" class="brand" aria-label="AMDAL FOOD Accueil">
+      AMDAL <span>FOOD</span>
+    </a>
+
+    <nav aria-label="Navigation principale" class="main-nav">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+        {{ t.translate('nav.home') }}
+      </a>
+      <a routerLink="/products" routerLinkActive="active">
+        {{ t.translate('nav.products') }}
+      </a>
+      <a routerLink="/contact" routerLinkActive="active">
+        {{ t.translate('nav.contact') }}
+      </a>
+    </nav>
+
+    <div class="nav-actions">
+      <a routerLink="/contact" class="partner-btn">
+        {{ t.translate('nav.partner') }}
+      </a>
+
+      <div class="lang-switch" role="group" aria-label="Choix de la langue">
+        <button type="button" (click)="changeLang('fr')" [class.active]="t.getLanguage() === 'fr'">FR</button>
+        <button type="button" (click)="changeLang('en')" [class.active]="t.getLanguage() === 'en'">EN</button>
+        <button type="button" (click)="changeLang('ar')" [class.active]="t.getLanguage() === 'ar'">AR</button>
+      </div>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,347 @@
+<app-nav-bar></app-nav-bar>
+
+<!-- 1. Section Hero & Showcase CRUNCHIX -->
+<section aria-labelledby="hero-title">
+  <div class="container hero">
+    <div class="intro">
+      <p class="eyebrow">{{ t.translate('home.hero.eyebrow') }}</p>
+      <h1 id="hero-title">
+        <span>{{ t.translate('home.hero.title1') }}</span>
+        <span>{{ t.translate('home.hero.title2') }}</span>
+        <span class="gold">{{ t.translate('home.hero.title3') }}</span>
+      </h1>
+      <p class="description">{{ t.translate('home.hero.desc') }}</p>
+      <div class="actions">
+        <a routerLink="/contact" class="button">
+          {{ t.translate('nav.partner') }} <span aria-hidden="true" class="arrow">→</span>
+        </a>
+      </div>
+      <p class="promise">{{ t.translate('home.hero.promise') }}</p>
+    </div>
+
+    <article id="crunchix" aria-labelledby="crunchix-title" class="showcase">
+      <p class="eyebrow">{{ t.translate('home.showcase.eyebrow') }}</p>
+      <header class="card-heading">
+        <h2 id="crunchix-title">CRUNCHIX</h2>
+        <p>{{ t.translate('home.showcase.subtitle') }}</p>
+      </header>
+      <div class="products">
+        <figure>
+          <div class="product-image">
+            <img src="assets/images/sweet-pepper.jpg" [alt]="'CRUNCHIX ' + t.translate('flavor.sweet_pepper')">
+          </div>
+          <figcaption>{{ t.translate('flavor.sweet_pepper') }}</figcaption>
+        </figure>
+        <figure>
+          <div class="product-image">
+            <img src="assets/images/cheddar.jpg" [alt]="'CRUNCHIX ' + t.translate('flavor.cheddar')">
+          </div>
+          <figcaption>{{ t.translate('flavor.cheddar') }}</figcaption>
+        </figure>
+        <figure>
+          <div class="product-image">
+            <img src="assets/images/hot-fire.jpg" [alt]="'CRUNCHIX ' + t.translate('flavor.hot_fire')">
+          </div>
+          <figcaption>{{ t.translate('flavor.hot_fire') }}</figcaption>
+        </figure>
+      </div>
+      <div class="card-footer">
+        <p>{{ t.translate('home.showcase.footer') }}</p>
+        <span aria-hidden="true" class="arrow">→</span>
+      </div>
+    </article>
+  </div>
+
+  <div class="stats-band">
+    <dl class="container stats">
+      <div>
+        <dt>CRUNCHIX</dt>
+        <dd>{{ t.translate('home.stats.brand') }}</dd>
+      </div>
+      <div>
+        <dt>12 × 150 g</dt>
+        <dd>{{ t.translate('home.stats.pack') }}</dd>
+      </div>
+      <div>
+        <dt>Île-de-France</dt>
+        <dd>{{ t.translate('home.stats.origin') }}</dd>
+      </div>
+    </dl>
+  </div>
+</section>
+
+<!-- 2. Section Le Partenaire de votre offre -->
+<section aria-labelledby="partner-offer-title" class="container partner-offer">
+  <div class="introduction">
+    <div>
+      <p class="eyebrow">{{ t.translate('home.partner.eyebrow') }}</p>
+      <h2 id="partner-offer-title">
+        {{ t.translate('home.partner.title1') }}<br>
+        {{ t.translate('home.partner.title2') }}
+      </h2>
+    </div>
+    <div class="summary">
+      <p>{{ t.translate('home.partner.summary') }}</p>
+    </div>
+  </div>
+
+  <div class="offers">
+    <article class="offer-card">
+      <header>
+        <p class="label">{{ t.translate('home.card1.label') }}</p>
+        <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="m20 3 15 8v19l-15 8-15-8V11L20 3Z M5 11l15 9 15-9 M20 20v18 M12 7l15 9v8"></path>
+        </svg>
+      </header>
+      <h3>
+        <span>{{ t.translate('home.card1.title1') }}</span>
+        <span>{{ t.translate('home.card1.title2') }}</span>
+      </h3>
+      <p class="card-desc">{{ t.translate('home.card1.desc') }}</p>
+    </article>
+
+    <article class="offer-card">
+      <header>
+        <p class="label">{{ t.translate('home.card2.label') }}</p>
+        <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M3 9h22v20H3V9Z M25 16h7l6 8v5H25 M25 22h11"></path>
+          <circle cx="11" cy="30" r="4"></circle>
+          <circle cx="31" cy="30" r="4"></circle>
+        </svg>
+      </header>
+      <h3>
+        <span>{{ t.translate('home.card2.title1') }}</span>
+        <span>{{ t.translate('home.card2.title2') }}</span>
+      </h3>
+      <p class="card-desc">{{ t.translate('home.card2.desc') }}</p>
+    </article>
+
+    <article class="offer-card">
+      <header>
+        <p class="label">{{ t.translate('home.card3.label') }}</p>
+        <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="m20 3 14 6-2 13c-1 7-6 12-12 16C14 34 9 29 8 22L6 9l14-6Z M13 19l6 6 9-12"></path>
+        </svg>
+      </header>
+      <h3>
+        <span>{{ t.translate('home.card3.title1') }}</span>
+        <span>{{ t.translate('home.card3.title2') }}</span>
+      </h3>
+      <p class="card-desc">{{ t.translate('home.card3.desc') }}</p>
+    </article>
+  </div>
+</section>
+
+<!-- 3. Section Notre Offre (Panneau CRUNCHIX) -->
+<section aria-labelledby="offer-title" class="container offer">
+  <header class="offer-intro">
+    <p class="eyebrow">{{ t.translate('home.offer.eyebrow') }}</p>
+    <h2 id="offer-title">{{ t.translate('home.offer.title') }}</h2>
+    <p class="subtitle">{{ t.translate('home.offer.subtitle') }}</p>
+  </header>
+
+  <div class="crunchix-panel">
+    <div class="visuals">
+      <p class="eyebrow">{{ t.translate('home.offer.panel_eyebrow') }}</p>
+      <div class="products">
+        <figure>
+          <div class="product-image">
+            <img src="assets/images/sweet-pepper.jpg" [alt]="'CRUNCHIX ' + t.translate('flavor.sweet_pepper')">
+          </div>
+          <figcaption>{{ t.translate('flavor.sweet_pepper') }}</figcaption>
+        </figure>
+        <figure>
+          <div class="product-image">
+            <img src="assets/images/cheddar.jpg" [alt]="'CRUNCHIX ' + t.translate('flavor.cheddar')">
+          </div>
+          <figcaption>{{ t.translate('flavor.cheddar') }}</figcaption>
+        </figure>
+        <figure>
+          <div class="product-image">
+            <img src="assets/images/hot-fire.jpg" [alt]="'CRUNCHIX ' + t.translate('flavor.hot_fire')">
+          </div>
+          <figcaption>{{ t.translate('flavor.hot_fire') }}</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="details">
+      <p class="eyebrow">{{ t.translate('home.offer.details_eyebrow') }}</p>
+      <h3>
+        {{ t.translate('home.offer.details_title1') }}<br>
+        {{ t.translate('home.offer.details_title2') }}
+      </h3>
+      <p class="details-desc">{{ t.translate('home.offer.details_desc') }}</p>
+      <dl class="figures">
+        <div>
+          <dt>12</dt>
+          <dd>{{ t.translate('home.offer.packs') }}</dd>
+        </div>
+        <div>
+          <dt>1,8 kg</dt>
+          <dd>{{ t.translate('home.offer.per_carton') }}</dd>
+        </div>
+      </dl>
+      <div class="actions">
+        <a routerLink="/products" class="button">
+          {{ t.translate('home.offer.discover_btn') }} <span aria-hidden="true" class="arrow">↗</span>
+        </a>
+        <p class="conditions">
+          {{ t.translate('home.offer.conditions') }} <a routerLink="/contact">{{ t.translate('nav.contact') }}</a>.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. Section Distribution & Accompagnement -->
+<section aria-labelledby="distribution-title" class="distribution-section">
+  <div class="container distribution">
+    <header class="introduction-dist">
+      <div>
+        <p class="eyebrow">{{ t.translate('home.dist.eyebrow') }}</p>
+        <h2 id="distribution-title">
+          {{ t.translate('home.dist.title1') }}<br>
+          {{ t.translate('home.dist.title2') }}
+        </h2>
+      </div>
+      <p class="summary-dist">{{ t.translate('home.dist.summary') }}</p>
+    </header>
+
+    <ol class="steps">
+      <li>
+        <div class="marker"><span class="badge">01</span><span class="connector"></span><span class="direction">→</span></div>
+        <div class="step-content">
+          <h3>{{ t.translate('home.step1.title') }}</h3>
+          <p>{{ t.translate('home.step1.desc') }}</p>
+        </div>
+      </li>
+      <li>
+        <div class="marker"><span class="badge">02</span><span class="connector"></span><span class="direction">→</span></div>
+        <div class="step-content">
+          <h3>{{ t.translate('home.step2.title') }}</h3>
+          <p>{{ t.translate('home.step2.desc') }}</p>
+        </div>
+      </li>
+      <li>
+        <div class="marker"><span class="badge">03</span><span class="connector"></span><span class="direction">→</span></div>
+        <div class="step-content">
+          <h3>{{ t.translate('home.step3.title') }}</h3>
+          <p>{{ t.translate('home.step3.desc') }}</p>
+        </div>
+      </li>
+      <li>
+        <div class="marker"><span class="badge">04</span><span class="connector"></span></div>
+        <div class="step-content">
+          <h3>{{ t.translate('home.step4.title') }}</h3>
+          <p>{{ t.translate('home.step4.desc') }}</p>
+        </div>
+      </li>
+    </ol>
+
+    <div class="b2b">
+      <div>
+        <h3>
+          {{ t.translate('home.b2b.title1') }}<br>
+          {{ t.translate('home.b2b.title2') }}
+        </h3>
+        <p>{{ t.translate('home.b2b.desc') }}</p>
+      </div>
+      <div>
+        <ul class="actors">
+          <li>{{ t.translate('home.actor1') }}</li>
+          <li>{{ t.translate('home.actor2') }}</li>
+          <li>{{ t.translate('home.actor3') }}</li>
+          <li>{{ t.translate('home.actor4') }}</li>
+          <li>{{ t.translate('home.actor5') }}</li>
+          <li>{{ t.translate('home.actor6') }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. Section France & International -->
+<section aria-labelledby="international-title" class="container international">
+  <div class="content">
+    <p class="eyebrow">{{ t.translate('home.int.eyebrow') }}</p>
+    <h2 id="international-title">
+      {{ t.translate('home.int.title1') }}<br>
+      {{ t.translate('home.int.title2') }}
+    </h2>
+    <p class="int-desc">{{ t.translate('home.int.desc') }}</p>
+    <div class="markets">
+      <div class="market">
+        <svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M30 13c0 9-12 21-12 21S6 22 6 13a12 12 0 1 1 24 0Z"></path>
+          <circle cx="18" cy="13" r="4"></circle>
+        </svg>
+        <div>
+          <h3>France</h3>
+          <p>{{ t.translate('home.int.m1_desc') }}</p>
+        </div>
+      </div>
+      <div class="market">
+        <svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M4 3v29h29 M9 26l8-11 7 5 9-15 M25 5h8v8"></path>
+        </svg>
+        <div>
+          <h3>{{ t.translate('home.int.m2_title') }}</h3>
+          <p>{{ t.translate('home.int.m2_desc') }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <figure class="world">
+    <div class="globe-stage">
+      <svg viewBox="0 0 500 500" preserveAspectRatio="none" aria-hidden="true" class="globe">
+        <circle cx="250" cy="250" r="249" class="globe-fill"></circle>
+        <g fill="none" stroke="currentColor" stroke-width="1" vector-effect="non-scaling-stroke">
+          <circle cx="250" cy="250" r="230"></circle>
+          <g class="meridians">
+            <ellipse cx="250" cy="250" rx="150" ry="230"></ellipse>
+            <ellipse cx="250" cy="250" rx="75" ry="230"></ellipse>
+            <ellipse cx="250" cy="250" rx="230" ry="65"></ellipse>
+            <ellipse cx="250" cy="250" rx="230" ry="132"></ellipse>
+            <ellipse cx="250" cy="250" rx="230" ry="198"></ellipse>
+            <path d="M250 20v460 M20 250h460"></path>
+          </g>
+        </g>
+      </svg>
+      <div class="origin">
+        <p class="eyebrow">{{ t.translate('home.int.origin') }}</p>
+        <p class="country">France</p>
+      </div>
+      <span aria-hidden="true" class="accent">
+        <svg viewBox="0 0 80 90" fill="none">
+          <circle cx="40" cy="36" r="36" fill="currentColor"></circle>
+          <path d="M22 79 50 51 M29 51h21v21"></path>
+        </svg>
+      </span>
+    </div>
+    <figcaption>France · Europe · International</figcaption>
+  </figure>
+</section>
+
+<!-- 6. Section Parlons de votre marché (CTA) -->
+<section aria-labelledby="market-cta-title" class="container market-cta">
+  <div class="card">
+    <div class="copy">
+      <p class="eyebrow">{{ t.translate('home.cta.eyebrow') }}</p>
+      <h2 id="market-cta-title">
+        {{ t.translate('home.cta.title1') }}<br>
+        {{ t.translate('home.cta.title2') }}
+      </h2>
+      <p class="cta-desc">{{ t.translate('home.cta.desc') }}</p>
+    </div>
+    <svg viewBox="0 0 80 80" fill="none" aria-hidden="true" class="decoration">
+      <path d="M8 72 72 8 M20 8h52v52"></path>
+    </svg>
+    <a routerLink="/contact" class="button partner">
+      {{ t.translate('nav.partner') }} <span aria-hidden="true" class="arrow">→</span>
+    </a>
+  </div>
+</section>
+
+<app-footer></app-footer>

@@ -1,0 +1,586 @@
+/* Variables locales & Fond de page */
+.products-page {
+  --crunchix-green: #106432;
+  --crunchix-orange: #ff4c1d;
+  --crunchix-yellow: #ffd000;
+  display: block;
+  min-height: 100vh;
+  background: #fff7e9;
+  color: #151515;
+}
+
+/* 1. Section Hero */
+.hero {
+  width: min(1400px, 100% - 12vw);
+  margin: auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, 1fr);
+  gap: 32px;
+  align-items: center;
+  min-height: calc(100svh - 124px);
+  padding-block: 72px 120px;
+}
+
+.welcome {
+  display: inline-block;
+  padding: 10px 24px;
+  background: var(--crunchix-green);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 800;
+  border-radius: 40px;
+}
+
+.hero h1 {
+  margin: 24px 0 42px;
+  font-size: clamp(36px, 5.5vw, 84px);
+  line-height: 1.12;
+  font-weight: 900;
+  letter-spacing: -2px;
+}
+
+.hero h1 span {
+  display: block;
+  color: var(--crunchix-green);
+}
+
+.hero h1 span + span {
+  color: var(--crunchix-orange);
+}
+
+.hero p {
+  max-width: 640px;
+  margin: 0;
+  font-size: clamp(18px, 1.8vw, 26px);
+  line-height: 1.5;
+  color: #383838;
+}
+
+.made {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 30px;
+  margin-top: 40px;
+  background: #fff;
+  border-radius: 60px;
+  color: var(--crunchix-green);
+  font-size: 16px;
+  font-weight: 800;
+}
+
+/* Grille de cartes pour les 3 sachets (Hero & Carton) */
+.hero-products,
+.carton-products {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  align-items: center;
+}
+
+.product-card {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+
+.product-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 52%;
+  transform: scale(1.12);
+  display: block;
+}
+
+/* Cadre image individuelle pour les sections Saveurs */
+.showcase-img {
+  width: min(100%, 420px);
+  aspect-ratio: 3 / 4;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.18);
+}
+
+.showcase-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 52%;
+  transform: scale(1.12);
+  display: block;
+}
+
+/* 2. Section Spirit */
+.spirit {
+  background: var(--crunchix-green);
+  color: #fff;
+}
+
+.spirit-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(40px, 6vw, 84px);
+  width: min(1400px, 100% - 12vw);
+  margin-inline: auto;
+  padding-block: 88px 112px;
+}
+
+.why {
+  display: inline-block;
+  padding: 10px 40px;
+  border-radius: 40px;
+  background: var(--crunchix-yellow);
+  color: var(--crunchix-green);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.spirit h2 {
+  margin: 22px 0 44px;
+  font-size: clamp(40px, 5vw, 76px);
+  font-weight: 900;
+  line-height: 1.12;
+  letter-spacing: -1.5px;
+}
+
+.spirit h2 > span,
+.crunch {
+  display: block;
+}
+
+.spirit .accent {
+  color: var(--crunchix-yellow);
+}
+
+.spirit .description {
+  max-width: 640px;
+  margin: 0;
+  font-size: clamp(18px, 1.8vw, 26px);
+  line-height: 1.5;
+}
+
+.closing {
+  margin: 32px 0 0;
+  font-size: clamp(20px, 1.9vw, 28px);
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.product {
+  display: grid;
+  place-items: center;
+  min-width: 0;
+}
+
+/* 3. Section Process */
+.process {
+  background: #fff;
+  color: #151515;
+}
+
+.process-inner {
+  width: min(1400px, 100% - 12vw);
+  margin-inline: auto;
+  padding-block: 80px 72px;
+}
+
+.how {
+  display: inline-block;
+  padding: 10px 40px;
+  border-radius: 40px;
+  background: var(--crunchix-orange);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.process h2 {
+  margin: 20px 0 24px;
+  font-size: clamp(36px, 5vw, 76px);
+  line-height: 1.12;
+  font-weight: 900;
+  letter-spacing: -1.5px;
+}
+
+.process .subtitle {
+  margin: 0;
+  font-size: clamp(18px, 1.8vw, 26px);
+  line-height: 1.5;
+  color: #656565;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  list-style: none;
+  padding: 0;
+  margin: 72px 0 0;
+}
+
+.cards li {
+  min-width: 0;
+  padding: 24px 28px 52px;
+  border-radius: 30px;
+  background: #fff5e8;
+}
+
+.number {
+  display: block;
+  margin-bottom: 28px;
+  color: var(--crunchix-orange);
+  font-size: 50px;
+  line-height: 1;
+  font-weight: 800;
+}
+
+.cards h3 {
+  margin: 0 0 14px;
+  font-size: 23px;
+  line-height: 1.3;
+  font-weight: 800;
+}
+
+.cards p {
+  margin: 0;
+  color: #656565;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.signature {
+  margin: 68px 0 0;
+  color: var(--crunchix-green);
+  font-size: clamp(20px, 1.9vw, 28px);
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+/* 4, 5, 6. Sections Saveurs (Hot Fire, Sweet Pepper, Cheddar) */
+.hot-fire {
+  background: #ff893e;
+  color: #fff;
+}
+
+.sweet-pepper {
+  background: #b2e38d;
+  color: #075321;
+}
+
+.cheddar {
+  background: #ffda66;
+  color: #713600;
+}
+
+.hot-fire-inner,
+.sweet-pepper-inner,
+.cheddar-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(40px, 6vw, 84px);
+  width: min(1400px, 100% - 12vw);
+  margin-inline: auto;
+  padding-block: 72px 84px;
+}
+
+.hot-fire h2,
+.cheddar h2 {
+  margin: 0 0 32px;
+  font-size: clamp(48px, 6.4vw, 96px);
+  line-height: 1.05;
+  font-weight: 900;
+  letter-spacing: -2px;
+}
+
+.sweet-pepper h2 {
+  margin: 0 0 32px;
+  font-size: clamp(38px, 4.5vw, 72px);
+  line-height: 1.05;
+  font-weight: 900;
+  letter-spacing: -1.5px;
+}
+
+.tagline {
+  margin: 0 0 34px;
+  font-size: clamp(25px, 2.4vw, 36px);
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.hot-fire .description,
+.sweet-pepper .description,
+.cheddar .description {
+  max-width: 640px;
+  margin: 0;
+  font-size: clamp(18px, 1.8vw, 26px);
+  line-height: 1.5;
+}
+
+.shadow {
+  width: 62%;
+  max-width: 320px;
+  height: 14px;
+  margin-top: 32px;
+  border-radius: 50%;
+  background: #32190a3d;
+  filter: blur(12px);
+}
+
+/* 7. Section Format Carton */
+.carton {
+  background: #fff7e9;
+}
+
+.carton-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(0, 1fr);
+  grid-template-areas:
+    "intro panel"
+    "products panel";
+  gap: 80px 64px;
+  align-items: center;
+  width: min(1400px, 100% - 12vw);
+  margin-inline: auto;
+  padding-block: 80px 64px;
+}
+
+.carton header {
+  grid-area: intro;
+}
+
+.carton .badge {
+  display: inline-block;
+  padding: 10px 28px;
+  border-radius: 40px;
+  background: var(--crunchix-green);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.carton h2 {
+  margin: 24px 0 32px;
+  font-size: clamp(36px, 5vw, 76px);
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+  font-weight: 900;
+}
+
+.carton h2 span {
+  display: block;
+  color: var(--crunchix-green);
+}
+
+.carton h2 span + span {
+  color: var(--crunchix-orange);
+}
+
+.carton header p {
+  margin: 0;
+  font-size: clamp(18px, 1.8vw, 26px);
+  line-height: 1.5;
+  color: #454545;
+}
+
+.panel {
+  grid-area: panel;
+  background: var(--crunchix-green);
+  color: #fff;
+  border-radius: 34px;
+  text-align: center;
+  padding: 48px 40px 72px;
+}
+
+.panel svg {
+  width: 80px;
+  height: 80px;
+}
+
+.panel dl {
+  margin: 28px 0 0;
+}
+
+.panel dt {
+  font-size: clamp(38px, 4.3vw, 64px);
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.panel dd {
+  margin: 18px 0 0;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.panel dl div + div {
+  margin-top: 32px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.panel dl div + div dt {
+  font-size: clamp(36px, 3.7vw, 56px);
+}
+
+.panel dl div + div dd {
+  font-size: 12px;
+}
+
+.carton-products {
+  grid-area: products;
+}
+
+/* 8. Section Café L'Antico */
+.lantico {
+  background: #141210;
+  color: #fbfbf8;
+  border-top: 1px solid #2e2924;
+}
+
+.lantico-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(40px, 6vw, 84px);
+  width: min(1400px, 100% - 12vw);
+  margin-inline: auto;
+  padding-block: 96px 112px;
+}
+
+.lantico-badge {
+  display: inline-block;
+  padding: 10px 28px;
+  border-radius: 40px;
+  background: rgba(199, 138, 45, 0.16);
+  border: 1px solid #c78a2d;
+  color: #e5b35c;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.lantico h2 {
+  margin: 24px 0 28px;
+  font-size: clamp(38px, 5vw, 72px);
+  line-height: 1.08;
+  font-weight: 900;
+  letter-spacing: -1.5px;
+}
+
+.lantico h2 span {
+  display: block;
+  color: #ffffff;
+}
+
+.lantico h2 .gold-text {
+  color: #c78a2d;
+}
+
+.lantico .tagline {
+  margin: 0 0 24px;
+  font-size: clamp(22px, 2.2vw, 32px);
+  font-weight: 700;
+  line-height: 1.3;
+  color: #e8dccb;
+}
+
+.lantico .description {
+  max-width: 620px;
+  margin: 0;
+  font-size: clamp(17px, 1.6vw, 22px);
+  line-height: 1.6;
+  color: #b2aba1;
+}
+
+.lantico-specs {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin: 44px 0;
+  padding-top: 28px;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.lantico-specs dt {
+  font-size: clamp(26px, 2.5vw, 36px);
+  font-weight: 800;
+  color: #c78a2d;
+}
+
+.lantico-specs dd {
+  margin: 8px 0 0;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #ded3c4;
+}
+
+.lantico-actions {
+  margin-top: 16px;
+}
+
+.gold-btn {
+  background: #c78a2d;
+  color: #141210;
+  font-weight: 700;
+}
+
+.gold-btn:hover {
+  background: #dba044;
+}
+
+.lantico-showcase {
+  width: min(100%, 440px);
+  aspect-ratio: 4 / 4.5;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(199, 138, 45, 0.35);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.55);
+  background: #1d1a17;
+}
+
+.lantico-showcase img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 1199px) {
+  .cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .hero,
+  .spirit-inner,
+  .hot-fire-inner,
+  .sweet-pepper-inner,
+  .cheddar-inner,
+  .lantico-inner,
+  .lantico-specs,
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .carton-inner {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "intro"
+      "panel"
+      "products";
+  }
+
+  .desktop-break {
+    display: none;
+  }
+}

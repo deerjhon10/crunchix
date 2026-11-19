@@ -1,0 +1,230 @@
+<app-nav-bar></app-nav-bar>
+
+<div class="products-page">
+  <!-- 1. Section Hero -->
+  <section aria-labelledby="crunchix-title" class="hero">
+    <div class="copy">
+      <span class="welcome">WELCOME</span>
+      <h1 id="crunchix-title">
+        <span>BIG CRUNCH.</span>
+        <span>BOLD FLAVOUR.</span>
+      </h1>
+      <p>{{ t.translate('prod.hero.desc') }}</p>
+      <div class="made">
+        <svg viewBox="0 0 30 20" width="30" height="20" aria-hidden="true" focusable="false">
+          <path fill="#002654" d="M0 0h10v20H0z"></path>
+          <path fill="white" d="M10 0h10v20H10z"></path>
+          <path fill="#ed2939" d="M20 0h10v20H20z"></path>
+        </svg>
+        MADE IN FRANCE
+      </div>
+    </div>
+
+    <div aria-label="Les trois saveurs CRUNCHIX" class="hero-products">
+      <div class="product-card">
+        <img src="assets/images/sweet-pepper.jpg" alt="CRUNCHIX Sweet Pepper">
+      </div>
+      <div class="product-card">
+        <img src="assets/images/cheddar.jpg" alt="CRUNCHIX Cheddar">
+      </div>
+      <div class="product-card">
+        <img src="assets/images/hot-fire.jpg" alt="CRUNCHIX Hot Fire">
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Section Spirit (WHY) -->
+  <section aria-labelledby="crunchix-spirit-title" class="spirit">
+    <div class="spirit-inner">
+      <div class="copy">
+        <span class="why">WHY</span>
+        <h2 id="crunchix-spirit-title">
+          <span>{{ t.translate('prod.spirit.title1') }}</span>
+          <span class="accent">
+            {{ t.translate('prod.spirit.title2') }} <span class="crunch">{{ t.translate('prod.spirit.title3') }}</span>
+          </span>
+        </h2>
+        <p class="description">{{ t.translate('prod.spirit.desc') }}</p>
+        <p class="closing">{{ t.translate('prod.spirit.closing') }}</p>
+      </div>
+      <div class="product">
+        <div class="showcase-img">
+          <img src="assets/images/hot-fire.jpg" alt="CRUNCHIX Hot Fire" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Section Process (HOW) -->
+  <section aria-labelledby="crunchix-process-title" class="process">
+    <div class="process-inner">
+      <header>
+        <span class="how">HOW</span>
+        <h2 id="crunchix-process-title">HOW WE CRUNCHIX</h2>
+        <p class="subtitle">{{ t.translate('prod.process.subtitle') }}</p>
+      </header>
+      <ol class="cards">
+        <li>
+          <span aria-hidden="true" class="number">01</span>
+          <div>
+            <h3>{{ t.translate('prod.process.c1_title') }}</h3>
+            <p>{{ t.translate('prod.process.c1_desc') }}</p>
+          </div>
+        </li>
+        <li>
+          <span aria-hidden="true" class="number">02</span>
+          <div>
+            <h3>{{ t.translate('prod.process.c2_title') }}</h3>
+            <p>{{ t.translate('prod.process.c2_desc') }}</p>
+          </div>
+        </li>
+        <li>
+          <span aria-hidden="true" class="number">03</span>
+          <div>
+            <h3>{{ t.translate('prod.process.c3_title') }}</h3>
+            <p>{{ t.translate('prod.process.c3_desc') }}</p>
+          </div>
+        </li>
+        <li>
+          <span aria-hidden="true" class="number">04</span>
+          <div>
+            <h3>CRUNCHIX</h3>
+            <p>{{ t.translate('prod.process.c4_desc') }}</p>
+          </div>
+        </li>
+      </ol>
+      <p class="signature">BAKED. CRUNCHY. BOLD.</p>
+    </div>
+  </section>
+
+  <!-- 4. Section Saveur Hot Fire -->
+  <section aria-labelledby="hot-fire-title" class="hot-fire">
+    <div class="hot-fire-inner">
+      <div class="copy">
+        <h2 id="hot-fire-title">HOT FIRE</h2>
+        <p class="tagline">{{ t.translate('prod.hot.tagline') }}</p>
+        <p class="description">{{ t.translate('prod.hot.desc') }}</p>
+      </div>
+      <div class="product">
+        <div class="showcase-img">
+          <img src="assets/images/hot-fire.jpg" alt="CRUNCHIX Hot Fire" loading="lazy">
+        </div>
+        <span aria-hidden="true" class="shadow"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Section Saveur Sweet Pepper -->
+  <section aria-labelledby="sweet-pepper-title" class="sweet-pepper">
+    <div class="sweet-pepper-inner">
+      <div class="copy">
+        <h2 id="sweet-pepper-title">SWEET PEPPER</h2>
+        <p class="tagline">{{ t.translate('prod.sweet.tagline') }}</p>
+        <p class="description">{{ t.translate('prod.sweet.desc') }}</p>
+      </div>
+      <div class="product">
+        <div class="showcase-img">
+          <img src="assets/images/sweet-pepper.jpg" alt="CRUNCHIX Sweet Pepper" loading="lazy">
+        </div>
+        <span aria-hidden="true" class="shadow"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Section Saveur Cheddar -->
+  <section aria-labelledby="cheddar-title" class="cheddar">
+    <div class="cheddar-inner">
+      <div class="copy">
+        <h2 id="cheddar-title">CHEDDAR</h2>
+        <p class="tagline">{{ t.translate('prod.cheddar.tagline') }}</p>
+        <p class="description">{{ t.translate('prod.cheddar.desc') }}</p>
+      </div>
+      <div class="product">
+        <div class="showcase-img">
+          <img src="assets/images/cheddar.jpg" alt="CRUNCHIX Cheddar" loading="lazy">
+        </div>
+        <span aria-hidden="true" class="shadow"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Section Format Carton -->
+  <section aria-labelledby="carton-title" class="carton">
+    <div class="carton-inner">
+      <header>
+        <span class="badge">{{ t.translate('prod.carton.badge') }}</span>
+        <h2 id="carton-title">
+          <span>{{ t.translate('prod.carton.title1') }}</span>
+          <span>{{ t.translate('prod.carton.title2') }}</span>
+        </h2>
+        <p>{{ t.translate('prod.carton.desc') }}</p>
+      </header>
+
+      <div aria-label="Conditionnement et poids net" class="panel">
+        <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="m20 3 15 8v19l-15 8-15-8V11L20 3Z M5 11l15 9 15-9 M20 20v18 M12 7l15 9v8"></path>
+        </svg>
+        <dl>
+          <div>
+            <dt>12 × 150 g</dt>
+            <dd>{{ t.translate('prod.carton.per') }}</dd>
+          </div>
+          <div>
+            <dt>1,8 kg</dt>
+            <dd>{{ t.translate('prod.carton.weight') }}</dd>
+          </div>
+        </dl>
+      </div>
+
+      <div aria-label="Les trois saveurs CRUNCHIX" class="carton-products">
+        <div class="product-card">
+          <img src="assets/images/sweet-pepper.jpg" alt="CRUNCHIX Sweet Pepper" loading="lazy">
+        </div>
+        <div class="product-card">
+          <img src="assets/images/cheddar.jpg" alt="CRUNCHIX Cheddar" loading="lazy">
+        </div>
+        <div class="product-card">
+          <img src="assets/images/hot-fire.jpg" alt="CRUNCHIX Hot Fire" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Section Café L'Antico -->
+  <section aria-labelledby="lantico-title" class="lantico">
+    <div class="lantico-inner">
+      <div class="copy">
+        <span class="lantico-badge">{{ t.translate('prod.lantico.badge') }}</span>
+        <h2 id="lantico-title">
+          <span>L’ANTICO.</span>
+          <span class="gold-text">{{ t.translate('prod.lantico.title2') }}</span>
+        </h2>
+        <p class="tagline">{{ t.translate('prod.lantico.tagline') }}</p>
+        <p class="description">{{ t.translate('prod.lantico.desc') }}</p>
+        <dl class="lantico-specs">
+          <div>
+            <dt>100%</dt>
+            <dd>{{ t.translate('prod.lantico.spec1') }}</dd>
+          </div>
+          <div>
+            <dt>PRO &amp; RETAIL</dt>
+            <dd>{{ t.translate('prod.lantico.spec2') }}</dd>
+          </div>
+        </dl>
+        <div class="lantico-actions">
+          <a routerLink="/contact" class="button gold-btn">
+            {{ t.translate('prod.lantico.btn') }} <span aria-hidden="true" class="arrow">→</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="product">
+        <div class="lantico-showcase">
+          <img src="assets/images/lantico-caps-gold.jpg" alt="Capsules de café L'Antico Or" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<app-footer></app-footer>
